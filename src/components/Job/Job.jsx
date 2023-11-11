@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 const Job = ({ job }) => {
   const {
     company_name,
@@ -8,6 +9,7 @@ const Job = ({ job }) => {
     job_type,
     location,
     salary,
+    id
   } = job;
   return (
     <div className=" card-compact  bg-base-100 shadow-xl p-4 border border-gray-200">
@@ -29,7 +31,7 @@ const Job = ({ job }) => {
 
         <p>If a dog chews shoes whose shoes does he choose?</p>
         <div className="card-actions justify-start">
-          <button className="btn btn-primary">View Details</button>
+          <Link to={`/job/${id}`}><button className="btn btn-primary">View Details</button></Link>
         </div>
       </div>
     </div>
