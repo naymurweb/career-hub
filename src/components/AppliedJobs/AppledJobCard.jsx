@@ -1,8 +1,6 @@
-import React from 'react';
 
 const AppledJobCard = ({job}) => {
     const {logo,job_title,remote_or_onsite}=job
-    // console.log(job);
     return (
 
         <div className="card card-side bg-base-100 shadow-xl my-8">

@@ -1,6 +1,8 @@
 import Banner from "../Banner/Banner";
 import Category from "../Category/Category";
 import FeturedJobs from "../FeturedJobs/FeturedJobs";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
+
 
 const Home = () => {
     return (
@@ -8,6 +10,11 @@ const Home = () => {
             <Banner/>
             <Category/>
             <FeturedJobs/>
+            <HelmetProvider>
+                <Helmet>
+                    <title>home</title>
+                </Helmet>
+            </HelmetProvider>
             
             
         </div>

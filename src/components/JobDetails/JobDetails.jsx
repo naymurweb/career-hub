@@ -3,6 +3,7 @@ import { setLocalStr } from "../../uttils/localStroge";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const JobDetails = () => {
   const [click, setClick] = useState(false);
@@ -29,6 +30,11 @@ const JobDetails = () => {
         Apply Now
       </button>
       <ToastContainer />
+      <HelmetProvider>
+                <Helmet>
+                    <title>jobDetails</title>
+                </Helmet>
+            </HelmetProvider>
     </div>
   );
 };
